@@ -1,0 +1,42 @@
+---
+title: "Neural Manifold"
+jupyter: python3
+
+author:
+  - name: "Deven Shidfar" 
+    email: "devenshidfar@math.ubc.ca"
+    affiliations:
+      - name: KDD Group
+        url: "https://rtviii.xyz/"
+
+  - name: "Khanh Dao Duc" 
+    email: "kdd@math.ubc.ca"
+    affiliations:
+      - name: Department of Mathematics, UBC
+        url: "https://www.math.ubc.ca/"
+      - name: Department of Computer Science, UBC
+        url: "https://www.cs.ubc.ca/"
+
+date: "September 18 2024"
+categories: [biology, bioinformatics, mathematics, biomedical engineering, neuroscience]    
+
+callout-icon: false
+format:
+  html:
+    code-fold: true
+bibliography: bibliography.bib
+
+execute:
+  echo: true
+  freeze: auto
+  warning: false
+
+---
+
+## Cebra's Persistent Cohomology
+
+The following is some basic Python code:
+
+```{python}
+print("This is a python test")
+```

@@ -1,0 +1,12 @@
+{
+  "hash": "8372f11b20e28907b69cd8ad7238adb8",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Neural Manifold\"\njupyter: python3\n\nauthor:\n  - name: \"Deven Shidfar\" \n    email: \"devenshidfar@math.ubc.ca\"\n    affiliations:\n      - name: KDD Group\n        url: \"https://rtviii.xyz/\"\n\n  - name: \"Khanh Dao Duc\" \n    email: \"kdd@math.ubc.ca\"\n    affiliations:\n      - name: Department of Mathematics, UBC\n        url: \"https://www.math.ubc.ca/\"\n      - name: Department of Computer Science, UBC\n        url: \"https://www.cs.ubc.ca/\"\n\ndate: \"September 18 2024\"\ncategories: [biology, bioinformatics, mathematics, biomedical engineering, neuroscience]    \n\ncallout-icon: false\nformat:\n  html:\n    code-fold: true\nbibliography: bibliography.bib\n\nexecute:\n  echo: true\n  freeze: auto\n  warning: false\n\n---\n\n\n\n\n## Cebra's Persistent Cohomology\n\nThe following is some basic Python code:\n\n::: {#8cbd78b8 .cell execution_count=1}\n``` {.python .cell-code}\nprint(\"This is a python test\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nThis is a python test\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
