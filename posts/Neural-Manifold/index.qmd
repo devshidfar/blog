@@ -68,11 +68,11 @@ $$
 
 In this equation, **distance travelled in the hippocampal frame** refers to the distance that the rat **"thinks"** it's moving.
 
-- $\mathcal{H = 1}$: The rat perceives itself as moving the "correct" speed
+- $\mathcal{H} = 1$: The rat perceives itself as moving the "correct" speed
 
-- $\mathcal{H > 1}$: The rat perceives itself as moving faster than it actually is with respect to the lab frame.
+- $\mathcal{H} > 1$: The rat perceives itself as moving faster than it actually is with respect to the lab frame.
 
-- $\mathcal{H < 1}$: The rat perceives itself as moving slower than it actually is with respect to the lab frame.
+- $\mathcal{H} < 1$: The rat perceives itself as moving slower than it actually is with respect to the lab frame.
 
 $\mathcal{H}$ gives valuable insights into how these visual cues such as the moving stripes affect the rats' internal **cognitive map** during the task. It gives an understanding of how the rats update their **perceived** position in the environment.
 
@@ -103,7 +103,7 @@ Next, we move on to what **CEBRA** is and how it can help us achieve our goal.
 
 **CEBRA**, introduced in @schneider2023, is a powerful self-supervised learning algorithm designed to create consistent, interpretable embeddings of high-dimensional neural recordings using auxiliary variables such as behavior or time. CEBRA generates consistent embeddings across trials, animals, and even different recording modalities​.
 
-In our analysis, we will use the **discovery mode* of CEBRA, with only time as our auxiliary variable. CEBRA is implemented in python, with extensive documentation and demos for users. The code and data used in the paper is open source.
+In our analysis, we will use the **discovery mode** of CEBRA, with only time as our auxiliary variable. CEBRA is implemented in python, with extensive documentation and demos for users. The code and data used in the paper is open source.
 
 ### The Need for CEBRA
 
@@ -137,7 +137,7 @@ $$
 $$
 
 
-Where f(x) and f(y) are the **encoded representations** of the neural data after passing through the CNN, $ \text{sim}(f(x), f(y)) $ is a similarity measure between two embeddings, implemented as **cosine similarity**, $\{y^+}$ represents the **positive pair** (similar to $ x $ in time), $ y_i^- $ represents the **negative pairs** (dissimilar to $ x $ in time), $ \tau $ is a **temperature parameter** that controls the sharpness of the distribution.
+Where f(x) and f(y) are the **encoded representations** of the neural data after passing through the CNN, $ \text{sim}(f(x), f(y)) $ is a similarity measure between two embeddings, implemented as **cosine similarity**, $y^+$ represents the **positive pair** (similar to $ x $ in time), $ y_i^- $ represents the **negative pairs** (dissimilar to $ x $ in time), $ \tau $ is a **temperature parameter** that controls the sharpness of the distribution.
 
 
 Note that the similarity measure depends on the CEBRA mode used, and we have used time as our similarity measure. The contrastive loss encourages the encoder to map temporally close data points (positive pairs) to close points in the latent space, while mapping temporally distant data points (negative pairs) further apart. This way, the embeddings reflect the temporal structure of the data. The final output is then the embedding value in the latent space. Below is a schematic taken from the original paper, showing the CEBRA architecture.
@@ -243,7 +243,7 @@ The next step is to determine if we can accurately decode Hippocampal Gain from 
 The idea is that:
 
 $$
-\mathcal{H} = \frac{\theta_\mathcal{H}}{\theta_\mathcal{L}}
+\mathcal{H} = \frac{d\theta_\mathcal{H}}{d\theta_\mathcal{L}}
 $$
 
 where $\theta_H$ is the change in distance in the hippocampal reference frame, decoded from our spline parametrization of the neural manifold, and $\theta_L$ is the physical distance traveled by the rat in the lab frame.
